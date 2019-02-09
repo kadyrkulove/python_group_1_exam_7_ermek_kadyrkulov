@@ -37,7 +37,42 @@ class App extends Component {
           price = ITEMS[i].price
         }
       }
+      let total = this.state.totalPrice;
+      total+ = price;
+      const copyState = [...this.state.items];
+      for (let i=0; i < copyState.lenght; i++){
+        if(copyState[i].name === name){
+          copyState[i].count++
+        }
+      }
 
+      this.setState({
+          totalPrice: total,
+          items: copyState
+      })
+    };
+    oneItem = (name) =>{
+        const item = [];
+        for (let i=0; i < ITEMS.length; i++){
+            if (ITEMS[i].name === name) {
+                item.push(ITEMS[i].price)
+            }
+        }
+    }
+    render() {
+        return (
+            <div className="App">
+                <div className='addItems'>
+                    <h3>Add items</h3>
+                    {this.createItems()}
+                </div>
+                <div className='orderDetails'>
+                    <h3>Order Details:</h3>
+                    <OrderList add={this.state.items} chan={ITEMS} cli={(name)=>{this.removeItem(name)}}/>
+                    <p>Total price: {this.state.totalPrice}</p>
+                </div>
+            </div>
+        );
     }
 }
 export default App;
