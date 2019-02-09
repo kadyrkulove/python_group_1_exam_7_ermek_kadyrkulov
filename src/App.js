@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Menu from './components/Menu/Menu';
 
 const ITEMS = [
     {name: 'Hamburger', price:80},

@@ -1,0 +1,25 @@
+.Items-list{
+    display: inline-block;
+    width: 44.3%;
+    border-radius: 10px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ccc;
+    margin-left: 10px;
+}
+.Items-list button{
+  display: inline-block;
+  margin: 0;
+  margin-top: 5px;
+  margin-left: 8px;
+  border: 1px solid #ccc;
+}
+.Items-list h6{
+  display: inline-block;
+  margin: 0;
+  margin-left: 5px;
+}
+.Items-list p{
+  margin: 0;
+  margin-left: 35px;
+}
