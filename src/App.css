@@ -1,3 +1,7 @@
+.Container{
+  width: 90%;
+}
+
 .addItems{
   border: 1px solid #ccc;
   display: inline-block;
